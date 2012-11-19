@@ -1,0 +1,6 @@
+<h3> Заказ из Books shop отправлен</h3>
+<p> Это сообщение уведомляет вас, что мы отправили ваш заказ:</p>
+<table>
+  <tr><th colspan="2">К-во</th><th>Описание</th></tr>
+  <%= render @order.line_items %>
+</table>

@@ -21,9 +21,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'annotate'
 
+group :test do
+  gem 'turn', :require => false
+end
+
+gem 'will_paginate' , '~> 3.0'
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

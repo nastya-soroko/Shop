@@ -1,9 +1,23 @@
 Shop::Application.routes.draw do
-  get "store/index"
+  get 'admin'=>  "admin#index"
 
-  resources :products
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
 
-  root to: 'store#index', as: 'store'
+  scope '(:locale)' do
+    resources :users
+    resources :orders
+    resources :line_items
+    resources :carts
+    resources :products  do
+      get :who_bought, on: :member
+    end
+    #get 'store/index'
+    root to: 'store#index', as: 'store'
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
