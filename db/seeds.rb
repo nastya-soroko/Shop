@@ -56,5 +56,5 @@ Product.create(:title => 'Web Design for Developers',
         and work through a web site redesign, taking a new design from concept
         all the way to implementation.
       </p>},
-               :image_url =>   '/images/wd4d.jpg',
+               :image_url =>   'Wd4d.jpg',
                :price => 42.95)
